@@ -1,4 +1,12 @@
-# Chamelon Browser 🦎
+<div align="center">
+
+# 🦎 Chamelon Browser
+
+**A fresh, independently branded Windows browser prototype powered by Chromium.**
+
+🟢 **Chamelon** · Dark UI · Mint accents · Chromium engine
+
+</div>
 
 An independently branded Windows browser prototype built with **Electron**, which embeds Chromium. This is a browser shell—not a full Chromium source fork—so we can iterate on the interface and features without maintaining a custom Chromium build.
 
@@ -32,7 +40,7 @@ Artifacts are written to `dist/`. The installer is per-user by default and lets 
 - Real tab strip and tab management
 - Bookmarks, history, downloads, and settings
 - Permission prompts and site controls
-- App icon, installer polish, and signed releases
+- Dedicated app icon, installer polish, and signed releases
 - Update mechanism and automated dependency/security updates
 
 ## Important notes
