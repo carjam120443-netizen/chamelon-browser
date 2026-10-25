@@ -8,8 +8,8 @@
   "private": true,
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --win nsis portable --publish never",
-    "dist:dir": "electron-builder --win --dir"
+    "dist": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/prepare-tor.ps1 && electron-builder --win nsis portable --publish never",
+    "dist:dir": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/prepare-tor.ps1 && electron-builder --win --dir"
   },
   "devDependencies": {
     "electron": "^38.0.0",
@@ -20,6 +20,13 @@
     "productName": "Chamelon Browser",
     "directories": { "output": "dist" },
     "files": ["src/**/*", "package.json"],
+    "extraResources": [
+      {
+        "from": "vendor/tor",
+        "to": "tor",
+        "filter": ["**/*"]
+      }
+    ],
     "win": {
       "target": ["nsis", "portable"],
       "artifactName": "Chamelon-Browser-${version}-${arch}.${ext}"
