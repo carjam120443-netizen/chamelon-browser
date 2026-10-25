@@ -21,7 +21,18 @@ if (-not $match.Success) {
   throw "The official checksum list did not contain $archiveName. Refusing to package an unverified Tor archive."
 }
 $expectedHash = $match.Groups[1].Value.ToUpperInvariant()
-$actualHash = (Get-FileHash -Algorithm SHA256 $archivePath).Hash.ToUpperInvariant()
+$sha256 = [System.Security.Cryptography.SHA256]::Create()
+try {
+  $fileStream = [System.IO.File]::OpenRead($archivePath)
+  try {
+    $hashBytes = $sha256.ComputeHash($fileStream)
+  } finally {
+    $fileStream.Dispose()
+  }
+  $actualHash = ([System.BitConverter]::ToString($hashBytes) -replace "-", "").ToUpperInvariant()
+} finally {
+  $sha256.Dispose()
+}
 if ($actualHash -ne $expectedHash) {
   throw "Tor archive SHA-256 mismatch. Expected $expectedHash, got $actualHash."
 }
