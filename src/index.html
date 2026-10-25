@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; object-src 'none';">
+  <title>Chamelon Browser</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="mark">C</span><span>chamelon</span></div>
+    <div class="nav-buttons">
+      <button id="back" title="Back" aria-label="Back">‹</button>
+      <button id="forward" title="Forward" aria-label="Forward">›</button>
+      <button id="reload" title="Reload" aria-label="Reload">↻</button>
+      <button id="home" title="Home" aria-label="Home">⌂</button>
+    </div>
+    <form id="address-form">
+      <span class="site-icon">◈</span>
+      <input id="address" type="text" spellcheck="false" autocomplete="off" placeholder="Search or enter an address">
+      <button class="go" type="submit" aria-label="Go">➜</button>
+    </form>
+    <button id="new-tab" class="new-tab" title="New tab">＋</button>
+  </header>
+  <main id="browser">
+    <section id="welcome" class="welcome">
+      <div class="hero-mark">C</div>
+      <p class="eyebrow">YOUR WINDOW TO THE WEB</p>
+      <h1>Meet <span>Chamelon.</span></h1>
+      <p class="subtitle">A fresh browser shell, powered by Chromium.</p>
+      <form id="search-form" class="search-box">
+        <span>⌕</span><input id="search" type="text" placeholder="Search the web or enter a URL" autocomplete="off"><button type="submit">Search ↗</button>
+      </form>
+      <div class="quick-links">
+        <button data-url="https://github.com">GitHub</button>
+        <button data-url="https://www.wikipedia.org">Wikipedia</button>
+        <button data-url="https://www.youtube.com">YouTube</button>
+      </div>
+      <p class="note">Early preview · Built by Carson</p>
+    </section>
+    <webview id="view" src="about:blank" partition="persist:chamelon" allowpopups></webview>
+  </main>
+  <footer><span id="status">Ready when you are</span><span>CHAMELON BROWSER <b>·</b> PREVIEW</span></footer>
+  <script src="renderer.js"></script>
+</body>
+</html>
