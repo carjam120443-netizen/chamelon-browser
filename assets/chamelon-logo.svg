@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Chamelon Browser</title>
+  <desc id="desc">Mint chameleon curled into a C shape on a dark green background.</desc>
+  <defs>
+    <linearGradient id="mint" x1="130" y1="120" x2="500" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9BFFD8"/>
+      <stop offset="1" stop-color="#35C99A"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" rx="136" fill="#17221F"/>
+  <circle cx="320" cy="320" r="242" fill="#20332D"/>
+  <path d="M430 174C395 143 350 128 302 132C201 140 132 221 132 320C132 420 208 498 306 502C353 504 393 488 424 464C445 448 446 421 429 405C412 390 388 395 369 408C349 423 329 430 307 428C249 424 208 378 208 320C208 261 248 215 306 208C335 204 360 212 382 229C402 245 428 244 445 226C461 208 450 190 430 174Z" fill="url(#mint)"/>
+  <path d="M425 178C455 168 483 181 493 205C504 231 490 256 465 264L423 278L407 236L439 225C449 221 452 213 448 204C444 195 434 193 425 197Z" fill="#9BFFD8"/>
+  <circle cx="448" cy="206" r="31" fill="#B6FFE4"/>
+  <circle cx="456" cy="207" r="17" fill="#17221F"/>
+  <circle cx="461" cy="201" r="6" fill="#FFFFFF"/>
+  <path d="M426 250L478 266L499 290L468 303L448 287L413 279Z" fill="#55DDAE"/>
+  <path d="M274 438C311 466 352 463 376 441C396 422 391 396 372 384C354 372 333 380 328 397C324 410 338 418 349 411C356 407 361 411 358 418C350 435 322 438 302 421C284 406 278 386 284 368" fill="none" stroke="#9BFFD8" stroke-width="25" stroke-linecap="round"/>
+  <path d="M211 366L178 390L185 414L220 408M239 426L223 460L243 476L272 445" fill="none" stroke="#35C99A" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M285 246C307 233 332 235 351 247" fill="none" stroke="#D5FFEE" stroke-width="9" stroke-linecap="round" opacity=".65"/>
+</svg>
