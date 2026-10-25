@@ -11,7 +11,7 @@ function normalizeInput(value) {
   if (/^(about:|https?:\/\/)/i.test(input)) return input;
   if (/^(localhost|127\.0\.0\.1)(:\d+)?([/?#].*)?$/i.test(input)) return "http://" + input;
   if (/^[^\s]+\.[^\s]+$/.test(input) && !input.includes(" ")) return "https://" + input;
-  return "https://www.google.com/search?q=" + encodeURIComponent(input);
+  return "https://duckduckgo.com/?q=" + encodeURIComponent(input);
 }
 function navigate(value) {
   const target = normalizeInput(value);
