@@ -21,6 +21,7 @@
       <input id="address" type="text" spellcheck="false" autocomplete="off" placeholder="Search or enter an address">
       <button class="go" type="submit" aria-label="Go">➜</button>
     </form>
+    <button id="tor-toggle" class="tor-toggle" type="button" title="Enable optional Tor routing" aria-pressed="false"><span>◉</span> <span id="tor-label">Tor off</span></button>
     <button id="new-tab" class="new-tab" title="New tab">＋</button>
   </header>
   <main id="browser">
@@ -37,11 +38,12 @@
         <button data-url="https://www.wikipedia.org">Wikipedia</button>
         <button data-url="https://www.youtube.com">YouTube</button>
       </div>
+      <p class="privacy-note">Tor routing is optional. Electron does not include Tor Browser's full anti-fingerprinting protections.</p>
       <p class="note">Early preview · Built by Carson</p>
     </section>
     <webview id="view" src="about:blank" partition="persist:chamelon" allowpopups></webview>
   </main>
-  <footer><span id="status">Ready when you are</span><span>CHAMELON BROWSER <b>·</b> PREVIEW</span></footer>
+  <footer><span id="status">Ready when you are</span><span id="footer-mode">CHAMELON BROWSER <b>·</b> PREVIEW</span></footer>
   <script src="renderer.js"></script>
 </body>
 </html>
