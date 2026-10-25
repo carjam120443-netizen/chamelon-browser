@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🦎 Chamelon Browser
+<img src="assets/chamelon-logo.svg" alt="Chamelon Browser logo" width="180" />
+
+# Chamelon Browser
 
 **A fresh, independently branded Windows browser prototype powered by Chromium.**
 
