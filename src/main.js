@@ -80,6 +80,7 @@ async function startTor() {
         "--DataDirectory", dataDirectory,
         "--Log", "notice stdout"
       ], {
+        cwd: path.dirname(executable),
         windowsHide: true,
         stdio: ["ignore", "pipe", "pipe"]
       });
