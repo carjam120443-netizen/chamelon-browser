@@ -5,7 +5,7 @@ const { spawn } = require("node:child_process");
 
 const BROWSER_PARTITION = "persist:chamelon";
 const TOR_SOCKS_PORT = 9150;
-const browserSession = session.fromPartition(BROWSER_PARTITION);
+let browserSession = null;
 let torProcess = null;
 let torState = "off";
 let torError = "";
@@ -177,6 +177,7 @@ function createWindow() {
 
 app.whenReady().then(() => {
   app.setAppUserModelId("net.carjam120443.chamelonbrowser");
+  browserSession = session.fromPartition(BROWSER_PARTITION);
   browserSession.setPermissionRequestHandler((_webContents, permission, callback) => {
     const safeDefaults = new Set(["fullscreen", "pointerLock"]);
     callback(safeDefaults.has(permission));
