@@ -27,9 +27,6 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm install
-      - name: Download and verify official Tor Expert Bundle
-        shell: pwsh
-        run: ./scripts/prepare-tor.ps1
       - name: Build Windows packages
         run: npm run dist
       - name: Upload installers
